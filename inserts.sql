@@ -1,1 +1,1 @@
-git
+--Karen Quispe i Ariadna Pascual
