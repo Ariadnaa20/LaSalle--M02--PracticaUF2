@@ -4,43 +4,44 @@
 -- Crear la base de datos si no existeix amb el charset y collation adecuats
 CREATE DATABASE IF NOT EXISTS LSG_NBA
     CHARACTER SET utf8mb4
-    COLLATE utf8mb4_spanish_ci;
+    COLLATE utf8mb4_spanish_ci;  --utf8mb4_unicode_ci : suport multilingue que abarcariem el català i el castellà ja que serveix per a tots els idiomes que utlitzan l'alfabet llati, inclós el català.
 
--- Utilizar la base de datos LSG_NBA
+-- Utilizar la base de dades LSG_NBA
 USE LSG_NBA;
 
--- Crear tabla PERSONA
+-- Crear taula PERSONA
 CREATE TABLE PERSONA (
-    DNI VARCHAR(9) PRIMARY KEY,
+    DNI VARCHAR(9),
     Nom VARCHAR(30) NOT NULL,
     Cognom1 VARCHAR(30) NOT NULL,
     Cognom2 VARCHAR(30) NOT NULL,
     Nacionalitat VARCHAR(30) NOT NULL,
     Sexe ENUM('H', 'D', 'NB', 'ND') NOT NULL,
-    DataNaixement DATE NOT NULL
+    DataNaixement DATE NOT NULL,
+    PRIMARY KEY (DNI)
 );
 
--- Crear tabla EQUIPO_NACIONAL
-CREATE TABLE EQUIPO_NACIONAL (
+-- Crear taula EQUIP_NACIONAL
+CREATE TABLE EQUIP_NACIONAL (
     Any INT(4) NOT NULL,
     Pais VARCHAR(30) NOT NULL,
     PRIMARY KEY (Any, Pais)
 );
 
--- Crear tabla FRANQUICIA
 CREATE TABLE FRANQUICIA (
-    Nom VARCHAR(30) PRIMARY KEY,
+    Nom VARCHAR(30),
     Ciutat VARCHAR(30) NOT NULL,
-    Pressupost DECIMAL(19,2) NOT NULL, -- Asumiendo que el presupuesto es un valor económico
-    AnellNBA BOOLEAN NOT NULL DEFAULT 0, -- Asumiendo que 'AnellNBA' es un valor booleano que indica si han ganado un anillo de la NBA
+    Pressupost DECIMAL(19,2) NOT NULL,
+    AnellsNBA BOOLEAN NOT NULL DEFAULT 0,
     DNIEntrenadorPrincipal VARCHAR(9),
     NomPavello VARCHAR(30) NOT NULL,
     NomFranquiciaTemporada VARCHAR(30) NOT NULL,
     NomConferencia VARCHAR(30) NOT NULL,
+    PRIMARY KEY (Nom),
     FOREIGN KEY (DNIEntrenadorPrincipal) REFERENCES PERSONA(DNI) ON DELETE RESTRICT ON UPDATE RESTRICT
 );
 
--- Crear tabla FRANQUICIA_TEMPORADA
+-- Crear taula FRANQUICIA_TEMPORADA
 CREATE TABLE FRANQUICIA_TEMPORADA (
     NomFranquicia VARCHAR(30) NOT NULL,
     AnyTemporada INT(4) NOT NULL,
@@ -49,19 +50,20 @@ CREATE TABLE FRANQUICIA_TEMPORADA (
     FOREIGN KEY (NomFranquicia) REFERENCES FRANQUICIA(Nom) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
--- Crear tabla CONFERENCIA
+-- Crear taula CONFERENCIA
 CREATE TABLE CONFERENCIA (
-    Nom VARCHAR(30) PRIMARY KEY,
-    ZonaGeografica VARCHAR(30) UNIQUE NOT NULL
+    Nom VARCHAR(30),
+    ZonaGeografica VARCHAR(30) UNIQUE NOT NULL,
+    PRIMARY KEY (Nom)
 );
 
--- Crear tabla DRAFT
+-- Crear taula DRAFT
 CREATE TABLE DRAFT (
     Any INT(4) NOT NULL AUTO_INCREMENT,
     PRIMARY KEY (Any)
 );
 
--- Crear tabla EQUIPO_NACIONAL_JUGADOR
+-- Crear taula EQUIPO_NACIONAL_JUGADOR
 CREATE TABLE EQUIPO_NACIONAL_JUGADOR (
     Any INT(4) NOT NULL,
     Pais VARCHAR(30) NOT NULL,
@@ -71,14 +73,87 @@ CREATE TABLE EQUIPO_NACIONAL_JUGADOR (
     FOREIGN KEY (DNI) REFERENCES PERSONA(DNI) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
--- Crear tabla JUGADOR (considerando que ya existe la tabla PERSONA)
+-- Crear taula JUGADOR (considerant que ja existeix la taula PERSONA)
 CREATE TABLE JUGADOR (
     DNI VARCHAR(9) NOT NULL,
-    AnySPRO INT(4) NOT NULL,
+    AnysPRO INT(4) NOT NULL,
     UniversitatOrigen VARCHAR(30),
-    NombreArenaNBA VARCHAR(30),
+    NombreAnellsNBA VARCHAR(30),
     Dorsal INT,
     NomFranquicia VARCHAR(30),
     PRIMARY KEY (DNI),
     FOREIGN KEY (DNI) REFERENCES PERSONA(DNI) ON DELETE CASCADE ON UPDATE CASCADE
 );
+
+-- Crear taula PAVELLO
+CREATE TABLE PAVELLO (
+    Nom VARCHAR(30),
+    Ciutat VARCHAR(30) NOT NULL,
+    Capacitat INT NOT NULL,
+    PRIMARY KEY (Nom)
+);
+
+-- Crear taula GRADA
+CREATE TABLE GRADA (
+    NomPavello VARCHAR(30) NOT NULL,
+    Codi INT NOT NULL,
+    EsCoberta BOOLEAN NOT NULL,
+    PRIMARY KEY (NomPavello, Codi),
+    FOREIGN KEY (NomPavello) REFERENCES PAVELLO(Nom) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+-- Crear taula SEIENT
+CREATE TABLE SEIENT (
+    NomPavello VARCHAR(30) NOT NULL,
+    Codi INT NOT NULL,
+    Numero INT NOT NULL,
+    Color VARCHAR(15),
+    PRIMARY KEY (NomPavello, Codi, Numero),
+    FOREIGN KEY (NomPavello, Codi) REFERENCES GRADA(NomPavello, Codi) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+-- Crear taula TEMPORADA_REGULAR
+CREATE TABLE TEMPORADA_REGULAR (
+    Any INT(4) NOT NULL,
+    Inici DATE NOT NULL,
+    Fi DATE NOT NULL,
+    PRIMARY KEY (Any)
+);
+
+-- Crear taula PREPARADOR_FISIC
+CREATE TABLE PREPARADOR_FISIC (
+    DNI VARCHAR(9) NOT NULL,
+    Especialitat VARCHAR(30) NOT NULL,
+    Cap BOOLEAN NOT NULL,
+    NomFranquicia VARCHAR(30) NOT NULL,
+    PRIMARY KEY (DNI),
+    FOREIGN KEY (DNI) REFERENCES PERSONA(DNI) ON DELETE RESTRICT ON UPDATE RESTRICT,
+    FOREIGN KEY (NomFranquicia) REFERENCES FRANQUICIA(Nom) ON DELETE RESTRICT ON UPDATE RESTRICT
+);
+
+-- Crear taula ENTRENADOR_PRINCIPAL
+CREATE TABLE ENTRENADOR_PRINCIPAL (
+    DNI VARCHAR(9) NOT NULL,
+    PercentatgeVictories DECIMAL(5,2) NOT NULL,
+    Salarí DECIMAL(19,2) NOT NULL,
+    AnyEquipNacional INT(4),
+    PaisEquipNacional VARCHAR(30),
+    PRIMARY KEY (DNI),
+    FOREIGN KEY (DNI) REFERENCES PERSONA(DNI) ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY (AnyEquipNacional, PaisEquipNacional) REFERENCES EQUIPO_NACIONAL(Any, Pais) ON DELETE SET NULL ON UPDATE CASCADE
+);
+
+--Crear taula DRAFT_JUGADOR_FRANQUICIA
+CREATE TABLE DRAFT_JUGADOR_FRANQUICIA (
+    AnyDRAFT INT(4) NOT NULL,
+    DNIJugador VARCHAR(9) NOT NULL,
+    NomFranquicia VARCHAR(30) NOT NULL,
+    Posicio INT NOT NULL,
+    PRIMARY KEY (AnyDRAFT, DNIJugador, NomFranquicia),
+    FOREIGN KEY (AnyDRAFT) REFERENCES DRAFT(Any) ON DELETE RESTRICT ON UPDATE RESTRICT,
+    FOREIGN KEY (DNIJugador) REFERENCES JUGADOR(DNI) ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY (NomFranquicia) REFERENCES FRANQUICIA(Nom) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+
+
