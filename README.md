@@ -6,9 +6,13 @@ Este proyecto se centra en el desarrollo y gestión de una base de datos relacio
 
 🛠 Acciones
 Diseño Relacional: Crearemos el esquema de la base de datos, definiendo tablas y relaciones. 📐
+
 Operaciones CRUD: Implementaremos operaciones de Crear, Leer, Actualizar y Eliminar (CRUD) para gestionar los datos. ➕🔍✏️❌
+
 Inserciones: Poblaremos la base de datos con información relevante sobre jugadores, equipos, partidos, etc. 📌
+
 Consultas y Subconsultas: Realizaremos consultas complejas, incluyendo subconsultas, para extraer insights y estadísticas interesantes. 🔍
+
 Actualizaciones y Eliminaciones: Modificaremos y eliminaremos datos para mantener la base actualizada y relevante. 🔄🗑
 
 🎲 Tecnologías
