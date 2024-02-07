@@ -1,4 +1,6 @@
 🏀 Proyecto SQL de la NBA 📊
+
+
 🎯 Objetivo
 Este proyecto se centra en el desarrollo y gestión de una base de datos relacional para la NBA. 🌐 A partir de esta, ejecutaremos diversas operaciones SQL, abarcando desde la creación de la estructura hasta la manipulación y consulta de los datos.
 
