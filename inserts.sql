@@ -41,21 +41,35 @@ INSERT INTO EQUIPO_NACIONAL VALUES
 INSERT INTO FRANQUICIA VALUES
 --(4)--NOM, CIUTAT, PRESSUPOST, ANELLNBA, DNIENTRENADORPRINCIPAL, NOMPAVELLO, NOMFRANQUICIATEMPORADA, NOMCONFERENCIA
 ("Dragones del Aro", "Barcelona", "2,500,000€", "Toros de Chicago", "12345678A", "Aurora", "Huracanes del Oeste", "Atlántico")
-("Titanes del Balón", "Nueva York", "1,800,000€", "Lakers de Los Ángeles", "98765432B", "Ébano", "Centinelas del Trueno", "Pacífico")
-("Estrellas del Drible", "Tokio", "1,200,000€", "Celtics de Boston", "54321098C", "Esmeralda", "Estrellas del Norte", "Medio Oeste")
+("Titanes del Balón", "Nueva York", "1,800,000€", "Lakers de Los Ángeles", "98765432B", "Ébano", "Centinelas del Trueno", "Sur Este")
+("Estrellas del Drible", "Tokio", "1,200,000€", "Celtics de Boston", "54321098C", "Esmeralda", "Estrellas del Norte", "Atlántico")
 ("Centauros del Tablero", "Sídney", "3,000,000€", "Warriors de Golden State", "87654321D", "Luna Nueva", "Toros del Desierto", "Sur Este")
 
 INSERT INTO FRANQUICIA_TEMPORADA VALUES
 --(12)--NOMFRANQUICIA, ANYTEMPORADA, ESGUANYADOR
-("Titanes del Balón", "", "")
-("Dragones del Aro", "", "")
-("Estrellas del Drible", "", "")
-("Dragones del Aro", "", "")
-("Titanes del Balón", "", "")
-("Estrellas del Drible", "", "")
-("Dragones del Aro", "", "")
-("Estrellas del Drible", "", "")
-("Titanes del Balón", "", "")
-("Dragones del Aro", "", "")
-("Estrellas del Drible", "", "")
-("Dragones del Aro", "", "")
+("Titanes del Balón", "2011", "True")
+("Dragones del Aro", "2012", "False")
+("Estrellas del Drible", "2013", "False")
+("Dragones del Aro", "2014", "True")
+("Titanes del Balón", "2015", "True")
+("Estrellas del Drible", "2016", "False")
+("Dragones del Aro", "2017", "True")
+("Estrellas del Drible", "2018", "True")
+("Titanes del Balón", "2019", "False")
+("Dragones del Aro", "2020", "False")
+("Estrellas del Drible", "2021", "True")
+("Dragones del Aro", "2022", "False")
+
+INSERT INTO CONFERENCIA VALUES
+--(2)--NOM, ZONAGEOGRAFICA
+("Atlántico", "Florida")
+("Sur Este", "Balcanes")
+
+INSERT INTO DRAFT VALUES
+--(4)-- ANY
+
+INSERT INTO EQUIPO_NACIONAL_JUGADOR VALUES
+--(18)--ANY, PAIS, DNI
+
+INSERT INTO JUGADOR VALUES
+--(16)--DNI, ANYSPRO, UNIVERSITATORIGEN, NOMBREARENANBA, DORSAL, NOMFRANQUICIA
