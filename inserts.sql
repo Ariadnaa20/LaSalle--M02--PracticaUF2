@@ -1,6 +1,7 @@
 --Karen Quispe i Ariadna Pascual
 
 INSERT INTO PERSONA VALUES
+--DNI, NOM, COGNOM1, COGNOM2, NACIONALITAT, SEXE, DATANEIXEMENT
 ("123456789Q", "Yunus", "Farag", " Archimedes", "Turca", "H", "12-04-1987")
 ("234567891W", "Coenraad", "Elhanan", "Tavish",  "Brasileña", "H", "03-04-1990")
 ("345678912E", "Raúl", "Szebastiá", "Veit", "Ruso", "H", "01-11-1999")
@@ -24,5 +25,37 @@ INSERT INTO PERSONA VALUES
 ("", "Janek", "Marc", "Henrikas", "Brasileña", "H", "19-02-2000")
 ("", "Liam", "Genadi", "Quidel", "Australiana", "H", "08-02-2000")
 ("", "Anaru", "Búi", "Cheops", "Japonesa", "H", "29-08-2000")
-("", "", "", "", "", "", "")
 
+
+INSERT INTO EQUIPO_NACIONAL VALUES
+--(8)--ANY, PAIS
+("1905", "Brasil")
+("1941", "Canadá")
+("1969", "Australia")
+("1937", "Japón")
+("1985", "España")
+("1922", "Sudáfrica")
+("1973", "Suecia")
+("1916", "India")
+
+INSERT INTO FRANQUICIA VALUES
+--(4)--NOM, CIUTAT, PRESSUPOST, ANELLNBA, DNIENTRENADORPRINCIPAL, NOMPAVELLO, NOMFRANQUICIATEMPORADA, NOMCONFERENCIA
+("Dragones del Aro", "Barcelona", "2,500,000€", "Toros de Chicago", "12345678A", "Aurora", "Huracanes del Oeste", "Atlántico")
+("Titanes del Balón", "Nueva York", "1,800,000€", "Lakers de Los Ángeles", "98765432B", "Ébano", "Centinelas del Trueno", "Pacífico")
+("Estrellas del Drible", "Tokio", "1,200,000€", "Celtics de Boston", "54321098C", "Esmeralda", "Estrellas del Norte", "Medio Oeste")
+("Centauros del Tablero", "Sídney", "3,000,000€", "Warriors de Golden State", "87654321D", "Luna Nueva", "Toros del Desierto", "Sur Este")
+
+INSERT INTO FRANQUICIA_TEMPORADA VALUES
+--(12)--NOMFRANQUICIA, ANYTEMPORADA, ESGUANYADOR
+("Titanes del Balón", "", "")
+("Dragones del Aro", "", "")
+("Estrellas del Drible", "", "")
+("Dragones del Aro", "", "")
+("Titanes del Balón", "", "")
+("Estrellas del Drible", "", "")
+("Dragones del Aro", "", "")
+("Estrellas del Drible", "", "")
+("Titanes del Balón", "", "")
+("Dragones del Aro", "", "")
+("Estrellas del Drible", "", "")
+("Dragones del Aro", "", "")
