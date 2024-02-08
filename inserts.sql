@@ -20,11 +20,11 @@ INSERT INTO PERSONA VALUES
 ("543219876G", "Svante", "Jeremiel", "Rini", "Italiana", "H", "22-04-2003")
 ("432198765H", "Juurou", "Rafiq", "Jani", "Sudafricana", "H", "04-04-1996")
 
-("", "Emiel", "Gibson", "Danr", "Mexicana", "H", "17-12-2002")
-("", "Hubertus", "Umaru", "Ingvar", "Canadiense", "H", "15-03-1997")
-("", "Janek", "Marc", "Henrikas", "Brasileña", "H", "19-02-2000")
-("", "Liam", "Genadi", "Quidel", "Australiana", "H", "08-02-2000")
-("", "Anaru", "Búi", "Cheops", "Japonesa", "H", "29-08-2000")
+("321987654J", "Emiel", "Gibson", "Danr", "Mexicana", "H", "17-12-2002")
+("219876543K", "Hubertus", "Umaru", "Ingvar", "Canadiense", "H", "15-03-1997")
+("198765432L", "Janek", "Marc", "Henrikas", "Brasileña", "H", "19-02-2000")
+("678543929M", "Liam", "Genadi", "Quidel", "Australiana", "H", "08-02-2000")
+("345754386N", "Anaru", "Búi", "Cheops", "Japonesa", "H", "29-08-2000")
 
 
 INSERT INTO EQUIPO_NACIONAL VALUES
@@ -67,9 +67,48 @@ INSERT INTO CONFERENCIA VALUES
 
 INSERT INTO DRAFT VALUES
 --(4)-- ANY
+("2010")
+("2013")
+("2016")
+("2019")
 
 INSERT INTO EQUIPO_NACIONAL_JUGADOR VALUES
 --(18)--ANY, PAIS, DNI
+("1937", "Japón", "234567891W")
+("1905", "Brasil", "456789112R")
+("1941", "Canadá", "789123456U")
+("1985", "España", "912345678P")
+("1973", "Suecia", "876543219S")
+("1905", "Brasil", "654321987F")
+("1937", "Japón", "432198765H")
+("1905", "Brasil", "321987654J")
+("1969", "Australia", "219876543K")
+("1905", "Brasil", "198765432L")
+("1969", "Australia", "678543929M")
+("1922", "Sudáfrica", "345754386N")
+("1916", "India", "123456789Q")
+("1922", "Sudáfrica", "345678912E")
+("1985", "España", "")
+("1973", "Suecia", "")
+("1941", "Canadá", "")
+("1973", "Suecia""")
+
 
 INSERT INTO JUGADOR VALUES
 --(16)--DNI, ANYSPRO, UNIVERSITATORIGEN, NOMBREARENANBA, DORSAL, NOMFRANQUICIA
+("234567891W", "", "", "", "", "")
+("789123456U", "", "", "", "", "")
+("912345678P", "", "", "", "", "")
+("876543219S", "", "", "", "", "")
+("654321987F", "", "", "", "", "")
+("432198765H", "", "", "", "", "")
+("321987654J", "", "", "", "", "")
+("219876543K", "", "", "", "", "")
+("198765432L", "", "", "", "", "")
+("678543929M", "", "", "", "", "")
+("345754386N", "", "", "", "", "")
+("123456789Q", "", "", "", "", "")
+("345678912E", "", "", "", "", "")
+("456789112R", "", "", "", "", "")
+("", "", "", "", "", "")
+("", "", "", "", "", "")
