@@ -1,4 +1,4 @@
---Karen Quispe i Ariadna Pascual
+--Karen Quispe i Ariadna Pascual i Alex Vilanova
 
 INSERT INTO PERSONA VALUES
 --(20)--DNI, NOM, COGNOM1, COGNOM2, NACIONALITAT, SEXE, DATANEIXEMENT
