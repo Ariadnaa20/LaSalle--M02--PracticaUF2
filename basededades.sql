@@ -1,4 +1,4 @@
---Ariadna Pascual i Karen Quispe
+--Ariadna Pascual i Karen Quispe i Alex Vilanova
 
 
 -- Crear la base de datos si no existeix amb el charset y collation adecuats

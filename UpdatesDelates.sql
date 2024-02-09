@@ -1,3 +1,5 @@
+--Ariadna Pascual, Karen Quispe i Alex Vilanova
+
 --1. Actualitza el Salari dels entrenadors principals i el Pressupost de la franquícia; incrementeu aquests valors en un +3% i un +5% respectivament. (Pista: calen 2 updates)
 
 UPDATE PERSONA
