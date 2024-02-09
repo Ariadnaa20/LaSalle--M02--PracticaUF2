@@ -37,10 +37,10 @@ INSERT INTO EQUIPO_NACIONAL VALUES
 
 INSERT INTO FRANQUICIA VALUES
 --(4)--NOM, CIUTAT, PRESSUPOST, ANELLNBA, DNIENTRENADORPRINCIPAL, NOMPAVELLO, NOMFRANQUICIATEMPORADA, NOMCONFERENCIA
-("Dragones del Aro", "Barcelona", 2,500,000, "Toros de Chicago", "12345678A", "Aurora", "Huracanes del Oeste", "Atlántico"),
-("Titanes del Balón", "Nueva York", 1,800,000, "Lakers de Los Ángeles", "98765432B", "Ébano", "Centinelas del Trueno", "Sur Este"),
-("Estrellas del Drible", "Tokio", 1,200,000, "Celtics de Boston", "54321098C", "Esmeralda", "Estrellas del Norte", "Atlántico"),
-("Centauros del Tablero", "Sídney", 3,000,000, "Warriors de Golden State", "87654321D", "Luna Nueva", "Toros del Desierto", "Sur Este");
+("Dragones del Aro", "Barcelona", "2,500,000", "Toros de Chicago", "12345678A", "Aurora", "Huracanes del Oeste", "Atlántico")
+("Titanes del Balón", "Nueva York", "1,800,000", "Lakers de Los Ángeles", "98765432B", "Ébano", "Centinelas del Trueno", "Sur Este")
+("Estrellas del Drible", "Tokio", "1,200,000", "Celtics de Boston", "54321098C", "Esmeralda", "Estrellas del Norte", "Atlántico")
+("Centauros del Tablero", "Sídney", "3,000,000", "Warriors de Golden State", "87654321D", "Luna Nueva", "Toros del Desierto", "Sur Este")
 
 INSERT INTO FRANQUICIA_TEMPORADA VALUES
 --(12)--NOMFRANQUICIA, ANYTEMPORADA, ESGUANYADOR
