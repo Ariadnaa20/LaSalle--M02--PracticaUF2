@@ -11,13 +11,14 @@ USE LSG_NBA;
 
 -- Crear tabla PERSONA
 CREATE TABLE PERSONA (
-    DNI VARCHAR(9) PRIMARY KEY,
+    DNI VARCHAR(9),
     Nom VARCHAR(30) NOT NULL,
     Cognom1 VARCHAR(30) NOT NULL,
     Cognom2 VARCHAR(30) NOT NULL,
     Nacionalitat VARCHAR(30) NOT NULL,
     Sexe ENUM('H', 'D', 'NB', 'ND') NOT NULL,
-    DataNaixement DATE NOT NULL
+    DataNaixement DATE NOT NULL,
+    PRIMARY KEY(DNI)
 );
 
 -- Crear tabla EQUIPO_NACIONAL
@@ -31,8 +32,8 @@ CREATE TABLE EQUIPO_NACIONAL (
 CREATE TABLE FRANQUICIA (
     Nom VARCHAR(30) PRIMARY KEY,
     Ciutat VARCHAR(30) NOT NULL,
-    Pressupost DECIMAL(19,2) NOT NULL, -- Asumiendo que el presupuesto es un valor económico
-    AnellNBA BOOLEAN NOT NULL DEFAULT 0, -- Asumiendo que 'AnellNBA' es un valor booleano que indica si han ganado un anillo de la NBA
+    Pressupost DECIMAL(19,2) NOT NULL, --  Assumint que el pressupost es un valor econòmic
+    AnellNBA BOOLEAN NOT NULL DEFAULT 0, -- Assumint que 'AnellNBA' es un valor booleà i que indica si han guanyat un anell de la NBA
     DNIEntrenadorPrincipal VARCHAR(9),
     NomPavello VARCHAR(30) NOT NULL,
     NomFranquiciaTemporada VARCHAR(30) NOT NULL,
@@ -51,8 +52,9 @@ CREATE TABLE FRANQUICIA_TEMPORADA (
 
 -- Crear tabla CONFERENCIA
 CREATE TABLE CONFERENCIA (
-    Nom VARCHAR(30) PRIMARY KEY,
-    ZonaGeografica VARCHAR(30) UNIQUE NOT NULL
+    Nom VARCHAR(30),
+    ZonaGeografica VARCHAR(30) UNIQUE NOT NULL,
+    PRIMARY KEY (Nom)
 );
 
 -- Crear tabla DRAFT
