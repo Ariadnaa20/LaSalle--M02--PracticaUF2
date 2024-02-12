@@ -221,20 +221,21 @@ INSERT INTO TEMPORADA_REGULAR VALUES
 
 
 INSERT INTO DRAFT_JUGADOR_FRANQUICIA VALUES 
---(13)--ANYDFRAT, DNI JUGADOR NOMFRANQUICIA, POSICIO
-("", "", "")
-("", "", "")
-("", "", "")
-("", "", "")
-("", "", "")
+--(13)--ANYDFRAT, DNIJUGADOR NOMFRANQUICIA, POSICIO
+(2010, "234567891W", "Dragones del Aro", 1)
+(2013, "789123456U", "Dragones del Aro", 2)
+(2010, "876543219S", "Dragones del Aro", 3)
+(2016, "912345678P", "Dragones del Aro", 4)
+(2010, "654321987F", "Dragones del Aro", 5)
 
-("", "", "")
-("", "", "")
-("", "", "")
-("", "", "")
-("", "", "")
+(2010, "432198765H", "Titanes del Balón", 6)
+(2016, "321987654J", "Titanes del Balón", 7)
+(2013, "219876543K", "Estrellas del Drible", 8)
+(2013, "198765432L", "Estrellas del Drible", 9)
+(2013, "678543929M", "Titanes del Balón")
 
-("", "", "")
-("", "", "")
-("", "", "")
+(2019, "345754386N", "Estrellas del Drible", 10)
+(2010, "123456789Q", "Estrellas del Drible", 11)
+(2016, "345678912E", "Centauros del Tablero", 12)
+
 
