@@ -21,6 +21,29 @@ WHERE Dorsal IS NULL;
 
 --4. Esborra tots aquells entrenadors principals que estiguin associats a una franquícia amb un pressupost inferior a 2 milions
 
+
+/*Com hem hagut de declarar la taula franquicia amb restriccions RESTRICT produeix que
+ aquestes restriccions impedeixin l'eliminació de files que són referenciades des d'altres taules 
+ per prevenir l'existència de referències òrfenes.*/
+
+
+
+/*Primer hem decidit eliminar la relacio Eliminar la relació a FRANQUICIA abans d'esborrar l'ENTRENADOR_PRINCIPAL :*/
+UPDATE FRANQUICIA
+SET DNIEntrenadorPrincipal = NULL
+WHERE Pressupost < 2000000;
+
+/*Segon hem decidit l'esborrar els entrenadors principals sense violar la integritat referencial:*/
+DELETE FROM ENTRENADOR_PRINCIPAL
+WHERE DNI IN (
+    SELECT DNI
+    FROM ENTRENADOR_PRINCIPAL
+    WHERE DNI NOT IN (SELECT DNIEntrenadorPrincipal FROM FRANQUICIA)
+);
+
+
+
+/*Aquesta es la primera consulta que habiem pensat pero es errònea per aquestes restriccions de RESTRICT */
 DELETE FROM ENTRENADOR_PRINCIPAL
 WHERE DNI IN (
     SELECT DNIEntrenadorPrincipal
@@ -31,7 +54,7 @@ WHERE DNI IN (
 
 --5. Com que tenim espectadors molt supersticiosos, no volen asseure’s a la grada número 13. Esborra les grades número 13 de tots els pavellons i també els seients associats. 
 
-
+--PAS 1
 /* 1: Depen de les claus foranes amb ON DELETE CASCADE entre GRADA i SEIENT si 
  esborrem les files de GRADA amb Codi = 13 també es provocarà l'esborrat dels SEIENT relacionats. Si aquest es el cas haurem de fer servir la 
  consulta: */
@@ -40,7 +63,7 @@ WHERE DNI IN (
   WHERE Codi = 13;
 
 
-
+--PAS 2
 /* 2: si las foreign key no tinguessin definit el ON DELETE CASCADE la consulta seria aixi:
 Primer eliminem els registres dependents en la taula SEIENT que estiguin associats a les graderies amb el Codi 13 */
 
