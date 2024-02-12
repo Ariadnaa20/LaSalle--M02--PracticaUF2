@@ -1,23 +1,22 @@
-🏀 Proyecto SQL de la NBA 📊
+🏀 Projecte SQL de l'NBA 📊
 
+🎯 Objectiu
+Aquest projecte es centra en el desenvolupament i gestió d'una base de dades relacional per a l'NBA. 🌐 A partir d'aquesta, executarem diverses operacions SQL, cobrint des de la creació de l'estructura fins a la manipulació i consulta de les dades.
 
-🎯 Objetivo
-Este proyecto se centra en el desarrollo y gestión de una base de datos relacional para la NBA. 🌐 A partir de esta, ejecutaremos diversas operaciones SQL, abarcando desde la creación de la estructura hasta la manipulación y consulta de los datos.
+🛠 Accions
+Disseny Relacional: Crearem l'esquema de la base de dades, definint taules i relacions. 📐
 
-🛠 Acciones
-Diseño Relacional: Crearemos el esquema de la base de datos, definiendo tablas y relaciones. 📐
+Operacions CRUD: Implementarem operacions de Crear, Llegir, Actualitzar i Eliminar (CRUD) per gestionar les dades. ➕🔍✏️❌
 
-Operaciones CRUD: Implementaremos operaciones de Crear, Leer, Actualizar y Eliminar (CRUD) para gestionar los datos. ➕🔍✏️❌
+Insercions: Omplirem la base de dades amb informació rellevant sobre jugadors, equips, partits, etc. 📌
 
-Inserciones: Poblaremos la base de datos con información relevante sobre jugadores, equipos, partidos, etc. 📌
+Consultes i Subconsultes: Realitzarem consultes complexes, incloent subconsultes, per extreure insights i estadístiques interessants. 🔍
 
-Consultas y Subconsultas: Realizaremos consultas complejas, incluyendo subconsultas, para extraer insights y estadísticas interesantes. 🔍
+Actualitzacions i Eliminacions: Modificarem i eliminarem dades per mantenir la base actualitzada i rellevant. 🔄🗑
 
-Actualizaciones y Eliminaciones: Modificaremos y eliminaremos datos para mantener la base actualizada y relevante. 🔄🗑
-
-🎲 Tecnologías
-MySQL: Para la gestión de la base de datos. 💾
-SQL: El lenguaje de consulta estructurado que utilizaremos para interactuar con la base de datos. 📝
+🎲 Tecnologies
+MySQL: Per a la gestió de la base de dades. 💾
+SQL: El llenguatge de consulta estructurat que utilitzarem per interactuar amb la base de dades. 📝
 
 🌟 Meta
-Nuestro fin es dominar las técnicas de manipulación de bases de datos SQL. El proyecto esta en constante evolución.
+El nostre objectiu és dominar les tècniques de manipulació de bases de dades SQL. El projecte està en constant evolució.
