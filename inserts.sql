@@ -134,92 +134,89 @@ INSERT INTO PREPARADOR_FISIC VALUES
 
 INSERT INTO ENTRENADOR_PRINCIPAL VALUES
 --(8)--DNI, PERCENTATGEVICTORIES, SALRI, ANYEQUIPNACIONAL, PAISEQUIPNACIONAL
-("", "", "", "", "", "", "", "")
-("", "", "", "", "", "", "", "")
-("", "", "", "", "", "", "", "")
-("", "", "", "", "", "", "", "")
-("", "", "", "", "", "", "", "")
+("987123291M", "65.2", "4,500,000", 1905, "Brasil")
+("234749365L", "58.9", "6,200,000", 1941, "Canadá")
+("921846735K", "71.3", "3,800,000", 1969, "Australia")
+("456712986H", "62.5", "5,700,000", 1937, "Japón")
 
-("", "", "", "", "", "", "", "")
-("", "", "", "", "", "", "", "")
-("", "", "", "", "", "", "", "")
-("", "", "", "", "", "", "", "")
+("923387463P", "68.7", "7,100,000", 1985, "España")
+("123456783A", "59.8", "4,900,000", 1922, "Sudáfrica")
+("987658342D", "73.4", "6,500,000", 1973, "Suecia")
+("243375839B", "66.1", "5,300,000", 1916, "India")
 
 
 INSERT INTO PAVELLO VALUES
 --(4)--NOM, CIUTAT, CAPACITAT
-("", "", "", "")
-("", "", "", "")
-("", "", "", "")
-("", "", "", "")
+("Centro Barclays", "Brooklyn", 19,812)
+("Arena Staples", "Los Angeles",  20,789)
+("Pabellón Oracle", "San Francisco", 17,732)
+("Estadio Madison Square", "New York", 18,064 )
 
 
 INSERT INTO GRADA VALUES
 --(14)--NOMPAVELLO, CODI, ESCOBERTA
-("", "", "")
-("", "", "")
-("", "", "")
-("", "", "")
-("", "", "")
+("Centro Barclays", "1001", "TRUE")
+("Arena Staples", "1002", "FALSE")
+("Pabellón Oracle", "1003", "TRUE")
+("Arena Staples", "1004", "TRUE")
+("Centro Barclays", "1005", "FALSE")
 
-("", "", "")
-("", "", "")
-("", "", "")
-("", "", "")
-("", "", "")
+("Pabellón Oracle", "1006", "FALSE")
+("Pabellón Oracle", "1007", "TRUE")
+("Arena Staples", "1008", "FALSE")
+("Centro Barclays", "1009", "TRUE")
+("Estadio Madison Square", "1010", "TRUE")
 
-("", "", "")
-("", "", "")
-("", "", "")
-("", "", "")
-
-
+("Arena Staples", "1011", "FALSE")
+("Pabellón Oracle", "1012", "TRUE")
+("Estadio Madison Square", "1013", "FALSE")
+("Centro Barclays", "1014", "TRUE")
 
 
 INSERT INTO SEIENT VALUES
 --(30)--NOMPAVELLO, CODI, NUMERO, COLOR
-("", "", "", "")
-("", "", "", "")
-("", "", "", "")
-("", "", "", "")
-("", "", "", "")
+("Centro Barclays", "1001", "101", "Rojo")
+("Arena Staples", "1002", "102", "Azul")
+("Pabellón Oracle", "1003", "103", "Verde")
+("Estadio Madison Square", "1010", "104", "Amarillo")
+("Centro Barclays", "1014", "105", "Blanco")
 
-("", "", "", "")
-("", "", "", "")
-("", "", "", "")
-("", "", "", "")
-("", "", "", "")
+("Centro Barclays", "1001", "106", "Negro")
+("Arena Staples", "1002", "107", "Gris")
+("Pabellón Oracle", "1003", "108", "Morado")
+("Estadio Madison Square", "1013", "109", "Naranja")
+("Estadio Madison Square", "1010", "110", "Rosa")
 
-("", "", "", "")
-("", "", "", "")
-("", "", "", "")
-("", "", "", "")
-("", "", "", "")
+("Centro Barclays", "1001", "111", "Turquesa")
+("Arena Staples", "1008", "112", "Marrón")
+("Pabellón Oracle", "1003", "113", "Celeste")
+("Estadio Madison Square", "1010", "114", "Beige")
+("Arena Staples", "1011", "115", "Borgoña")
 
-("", "", "", "")
-("", "", "", "")
-("", "", "", "")
-("", "", "", "")
-("", "", "", "")
+("Centro Barclays", "1009", "116", "Verde oscuro")
+("Arena Staples", "1002", "117", "Gris claro")
+("Pabellón Oracle", "1003", "118", "Azul marino")
+("Centro Barclays", "1014", "119", "Verde oliva")
+("Arena Staples", "1011", "120", "Crema")
 
-("", "", "", "")
-("", "", "", "")
-("", "", "", "")
-("", "", "", "")
-("", "", "", "")
+("Centro Barclays", "1009", "121", "Lavanda")
+("Arena Staples", "1008", "122", "Caqui")
+("Pabellón Oracle", "1012", "123", "Coral")
+("Estadio Madison Square", "1010", "124", "Verde lima")
+("Pabellón Oracle", "1007", "125", "Melocotón")
 
-("", "", "", "")
-("", "", "", "")
-("", "", "", "")
-("", "", "", "")
-("", "", "", "")
+("Centro Barclays", "1001", "126", "Aguamarina")
+("Arena Staples", "1008", "127", "Bronce")
+("Pabellón Oracle", "1007", "128", "Chocolate")
+("Arena Staples", "1011", "129", "Lavanda")
+("Estadio Madison Square", "1013", "130", "Mostaza")
 
 
 INSERT INTO TEMPORADA_REGULAR VALUES
 --(3)--ANY, INICI,FI
-("", "", "")
-("", "", "")
-("", "", "")
+("2022", 2021-10-19, 2022-04-10)
+("2021", 2020-12-22, 2021-05-16)
+("2020", 2019-10-22, 2020-04-15)
 
 
 
