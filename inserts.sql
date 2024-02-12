@@ -99,6 +99,10 @@ INSERT INTO EQUIP_NACIONAL_JUGADOR (Any, Pais, DNI) VALUES
 (1922, "Sudafrica", "345678912E"),
 (1985, "Espana", "567891234T"),
 (1973, "Suecia", "987654321A");
+(1941, "Canada", "543219876G"),
+(1969, "Australia", "678912345Y");
+(1941, "Canada", "987654321A"), 
+(1969, "Australia", "123456789Q"); 
 
 
 
@@ -220,5 +224,7 @@ INSERT INTO DRAFT_JUGADOR_FRANQUICIA (AnyDRAFT, DNIJugador, NomFranquicia, Posic
 (2019, "345754386N", "Estrellas del Drible", 10),
 (2010, "123456789Q", "Estrellas del Drible", 11),
 (2016, "345678912E", "Centauros del Tablero", 12);
+(2019, "987654321A", "Centauros del Tablero", 13),
+(2016, "567891234T", "Estrellas del Drible", 14);
 
 
