@@ -23,6 +23,19 @@ INSERT INTO PERSONA VALUES
 ("678543929M", "Liam", "Genadi", "Quidel", "Australiana", "H", 08-02-2000),
 ("345754386N", "Anaru", "Búi", "Cheops", "Japonesa", "H", 29-08-2000);
 
+("987123291M", "Hope", "Clements", "Gómez", "Japonés", "M", 27-09-1992)
+("234749365L", "Miah", "Cline", "Rodríguez", "Australiano", "M", 15-06-1997)
+("921846735K", "Clarence", "Beltran", "García", "Brasileño", "H", 03-11-1990)
+("456712986H", "Bonnie", "Horton", "Fernández", "Canadiense", "M", 21-03-2003)
+("923387463P", "Kyron", "Randolph", "Pérez", "Sudafricano", "H", 09-12-1995)
+
+("123456783A", "Neo", "Prince", "Martínez", "Canadiense", "H", 18-08-1998)
+("987658342D", "Alys", "Barber", "López", "Noruego", "H", 30-04-2001)
+("243375839B", "Marina", "Heath", "Sánchez", "Indio", "M", 07-07-1993)
+("493752145F", "Jude", "Fuller", "Ramírez", "Mexicano", "M", 12-10-2000)
+("234554329J", "Inaaya", "Short", "González", "Italiano", "M", 24-02-1996)
+
+("234598787H", "Kezia", "Oliver", "Torres", "Ruso", "H", 06-05-2004)
 
 INSERT INTO EQUIPO_NACIONAL VALUES
 --(8)--ANY, PAIS
@@ -109,3 +122,122 @@ INSERT INTO JUGADOR VALUES
 ("456789112R", 2, "Columbia", "Moda Center", 8, "Titanes del Balón"),
 ("567891234T", 2, "Yale", "AT&T Center", 20, "Estrellas del Drible"),
 ("987654321A", 5, "Toronto", "Amway Cente", 12, "Dragones del Aro");
+
+INSERT INTO PREPARADOR_FISIC VALUES
+--(5)--DNI, ESPECIALITAT, CAP, NOMFRANQUICIA ref FRANQUICIA
+("987123291M", "Entrenamiento", "Liderazgo", "Estrellas del Drible")
+("234749365L", "Rehabilitación", "Inspiración", "Titanes del Balón")
+("921846735K", "Nutrición", "Comunicación", "Centauros del Tablero")
+("456712986H", "Biomecánica", "Ejemplo", "Dragones del Aro")
+("923387463P", "Gestión", "Coordinación", "Estrellas del Drible")
+
+
+INSERT INTO ENTRENADOR_PRINCIPAL VALUES
+--(8)--DNI, PERCENTATGEVICTORIES, SALRI, ANYEQUIPNACIONAL, PAISEQUIPNACIONAL
+("", "", "", "", "", "", "", "")
+("", "", "", "", "", "", "", "")
+("", "", "", "", "", "", "", "")
+("", "", "", "", "", "", "", "")
+("", "", "", "", "", "", "", "")
+
+("", "", "", "", "", "", "", "")
+("", "", "", "", "", "", "", "")
+("", "", "", "", "", "", "", "")
+("", "", "", "", "", "", "", "")
+
+
+INSERT INTO PAVELLO VALUES
+--(4)--NOM, CIUTAT, CAPACITAT
+("", "", "", "")
+("", "", "", "")
+("", "", "", "")
+("", "", "", "")
+
+
+INSERT INTO GRADA VALUES
+--(14)--NOMPAVELLO, CODI, ESCOBERTA
+("", "", "")
+("", "", "")
+("", "", "")
+("", "", "")
+("", "", "")
+
+("", "", "")
+("", "", "")
+("", "", "")
+("", "", "")
+("", "", "")
+
+("", "", "")
+("", "", "")
+("", "", "")
+("", "", "")
+
+
+
+
+INSERT INTO SEIENT VALUES
+--(30)--NOMPAVELLO, CODI, NUMERO, COLOR
+("", "", "", "")
+("", "", "", "")
+("", "", "", "")
+("", "", "", "")
+("", "", "", "")
+
+("", "", "", "")
+("", "", "", "")
+("", "", "", "")
+("", "", "", "")
+("", "", "", "")
+
+("", "", "", "")
+("", "", "", "")
+("", "", "", "")
+("", "", "", "")
+("", "", "", "")
+
+("", "", "", "")
+("", "", "", "")
+("", "", "", "")
+("", "", "", "")
+("", "", "", "")
+
+("", "", "", "")
+("", "", "", "")
+("", "", "", "")
+("", "", "", "")
+("", "", "", "")
+
+("", "", "", "")
+("", "", "", "")
+("", "", "", "")
+("", "", "", "")
+("", "", "", "")
+
+
+INSERT INTO TEMPORADA_REGULAR VALUES
+--(3)--ANY, INICI,FI
+("", "", "")
+("", "", "")
+("", "", "")
+
+
+
+INSERT INTO DRAFT_JUGADOR_FRANQUICIA VALUES 
+--(13)--ANYDFRAT, DNI JUGADOR NOMFRANQUICIA, POSICIO
+("", "", "")
+("", "", "")
+("", "", "")
+("", "", "")
+("", "", "")
+
+("", "", "")
+("", "", "")
+("", "", "")
+("", "", "")
+("", "", "")
+
+("", "", "")
+("", "", "")
+("", "", "")
+
