@@ -52,8 +52,7 @@ WHERE Codi IN (
     WHERE Codi = 13
 );
 
-/*Eliminar les graderies amb *Codi 13 de la taula GRADERIA.*/
---borrar les grades numero 13
+--Eliminar les graderies amb Codi 13 de la taula GRADERIA.borrar les grades numero 13
 DELETE FROM GRADA
 WHERE Codi = 13;
 
