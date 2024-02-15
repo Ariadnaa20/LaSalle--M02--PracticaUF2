@@ -67,7 +67,7 @@ INSERT INTO FRANQUICIA_TEMPORADA VALUES
 ("Estrellas del Drible", 2021, "True"),
 ("Dragones del Aro", 2022, "False");
 
-INSERT INTO CONFERENCIA VALUES
+INSERT INTO CONFERENCIA VALUE
 --(2)--NOM, ZONAGEOGRAFICA
 ("Atlántico", "Florida"),
 ("Sur Este", "Balcanes");
